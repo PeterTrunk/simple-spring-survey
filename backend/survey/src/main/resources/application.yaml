@@ -1,3 +1,11 @@
 spring:
   application:
     name: survey
+  datasource:
+    url: jdbc:postgresql://localhost:5432/sss
+    username: ${DB_USER}
+    password: ${DB_PASSWORD}
+  jpa:
+    hibernate:
+      ddl-auto: validate
+    open-in-view: false
