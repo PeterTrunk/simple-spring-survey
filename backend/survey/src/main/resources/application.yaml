@@ -11,3 +11,8 @@ spring:
     open-in-view: false
   config:
     import: optional:file:../../.env[.properties]
+  security:
+    oauth2:
+      resourceserver:
+        jwt:
+          issuer-uri: ${KEYCLOAK_ISSUER_URI:http://localhost:8081/realms/sss}
