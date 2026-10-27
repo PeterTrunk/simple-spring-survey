@@ -2,10 +2,12 @@ spring:
   application:
     name: survey
   datasource:
-    url: jdbc:postgresql://localhost:5432/sss
-    username: ${DB_USER}
-    password: ${DB_PASSWORD}
+    url: ${DB_URL:jdbc:postgresql://localhost:5432/sss}
+    username: ${DB_USER:sss}
+    password: ${DB_PASSWORD:sss_dev}
   jpa:
     hibernate:
       ddl-auto: validate
     open-in-view: false
+  config:
+    import: optional:file:../../.env[.properties]
