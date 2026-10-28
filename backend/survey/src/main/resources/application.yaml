@@ -16,3 +16,6 @@ spring:
       resourceserver:
         jwt:
           issuer-uri: ${KEYCLOAK_ISSUER_URI:http://localhost:8081/realms/sss}
+  jackson:
+    deserialization:
+      fail-on-null-for-primitives: false
